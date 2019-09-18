@@ -18,7 +18,9 @@ jobs:
 
 - template: publish.yml@sunpy
   parameters:
-    targets: [sdist]
+    targets:
+        - wheels_linux
+        - sdist
     artifact_feed: 'test'
     pypi_remote: 'test'
 
