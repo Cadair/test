@@ -1,0 +1,22 @@
+name: $(BuildDefinitionName)_$(Date:yyyyMMdd)$(Rev:.rr)
+variables:
+  CI_NAME: Azure Pipelines
+  CI_BUILD_ID: $(Build.BuildId)
+  CI_BUILD_URL: "https://dev.azure.com/DrCadair/test/_build/results?buildId=$(Build.BuildId)"
+
+# These resources need to be setup on the Azure Pipeline website
+# as a service connection (if it has not been already).
+resources:
+  repositories:
+  - repository: sunpy
+    type: github
+    endpoint: sunpy
+    name: sunpy/azure-pipelines-template
+    ref: pypi_no_wheels
+
+jobs:
+
+- template: publish.yml@sunpy
+  parameters:
+    external_feed: 'PyPI'
+
