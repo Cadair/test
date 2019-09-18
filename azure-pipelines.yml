@@ -18,5 +18,5 @@ jobs:
 
 - template: publish.yml@sunpy
   parameters:
-    external_feed: 'PyPI'
+    artifact_feed: 'test'
 
