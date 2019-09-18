@@ -22,6 +22,8 @@ jobs:
   parameters:
     targets:
         - wheels_linux
+        - wheels_macosx
+        - wheels_windows
         - sdist
     artifact_feed: 'test'
     pypi_remote: 'test'
