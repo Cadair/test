@@ -10,7 +10,7 @@ resources:
   repositories:
   - repository: sunpy
     type: github
-    endpoint: sunpy
+    endpoint: Cadair
     name: sunpy/azure-pipelines-template
     ref: pypi_no_wheels
 
