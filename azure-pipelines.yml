@@ -18,5 +18,6 @@ jobs:
 
 - template: publish.yml@sunpy
   parameters:
+    targets: [sdist]
     artifact_feed: 'test'
 
